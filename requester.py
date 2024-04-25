@@ -6,7 +6,7 @@ def send_request(message, conversation_history):
     url = 'https://api.openai.com/v1/chat/completions'
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer sk-proj-zJ0Vbf0Anl71NJStFVRnT3BlbkFJi0NvA7H9uL38p1CCBspf',
+        'Authorization': 'Bearer ${OPENAI_API_KEY}',
         'Cookie': '_cf_bm=._2PiCg6r70HaAMKhUiJ5dlHLrEZz5tlktuWSPg.AUU-1713291200-1.0.1.1-1CyYTJdv9zE3o_VOqq6Sd2mSBZSKasD0me5B9q9acgoHWgiEj9Myk39tYXZVpk_ocxME_sCaMFO.54k83aV.w; _cfuvid=zvZH1myTHbuWjsdD_fWv.YtHHOnZW3Ct_FJpK8z34a0-1713291200157-0.0.1.1-604800000'
     }
     data = {
