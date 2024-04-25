@@ -65,9 +65,9 @@ def send_csv_rows(csv_path):
         })
 
     # Join the responses together into a single string
-    result = ' next 5 secs \n'.join(responses)
+    result = ' next 15 secs \n'.join(responses)
     print(responses)
-    response = send_request(result+" Now you will be giving commentary for this at a rate of 180 wpm, make commentary relevant with the video seconds, with 5 seconds representing about 15 words every 5 second brief summary is given in the text refer that. So keep in mind to use data with respect to seconds of video and write commentary. Output should be 180 words with each 5 second only getting 15 words. Please don't say anything other than commentary.Make it continuous without mentioning frames.", conversation_history)
+    response = send_request(result+"Now that you have input of all the frames as well as summary of all the frames, create a natural live commentary, for the previous 60 seconds at the rate of 150 words per minute. Decide your words according to frames descriptions and what word number it is. Also output only commentary nothing else. Keep the output limited to 150 words.", conversation_history)
     result=response['choices'][0]['message']['content']
     print(result)
     return result

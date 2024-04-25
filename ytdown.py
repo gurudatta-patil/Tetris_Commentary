@@ -16,7 +16,7 @@ def extract_frames(video_path, output_folder):
     duration = int(clip.duration)
     os.makedirs(output_folder, exist_ok=True)
     print("Duration:", duration)
-    for i in range(60, 120):
+    for i in range(60, 120, 3):
         frame = clip.get_frame(i)
         frame_path = os.path.join(output_folder, f"frame_{i:04d}.jpg")
         cv2.imwrite(frame_path, cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
