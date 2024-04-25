@@ -37,10 +37,10 @@ def extract_video(video_path, output_path, start_time, end_time):
 def downloader(url):
     youtube_url = url
     output_folder = "frames"
-    video_path = "./"
+    video_path = "./tmp/"
     video_filename = "video.mp4"
     print("Current working directory:", os.getcwd())
     download_video(youtube_url, video_path,video_filename)
-    extract_frames("./video.mp4", output_folder)
-    extract_video("./video.mp4", "./output.mp4", 60, 120)
+    extract_frames("./tmp/video.mp4", output_folder)
+    extract_video("./tmp/video.mp4", "./tmp/output.mp4", 60, 120)
 
